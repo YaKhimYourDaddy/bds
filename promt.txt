@@ -1,0 +1,62 @@
+nextjs: build a complex search component with tailwind, you can use shadcn. the component must be completely responsive and have these filters:
+1. select between: mua bán nhà đất, cho thuê nhà đất, dự án (default: nothing checked)
+2. select a city and we can type in it to filter the cities that appears in this dropdown, the city is vietnamese names so handle if there's a problem in search by keyword, this filtering process for just 63 city is not so complex so we can just handle it right in the component file. (default: nothing checked)
+3. a dropdown (able after the 1st dropdown has been chosen) to select a type of property (from the propertyTypes I will provide below) if the 1st dropdown has been chose with mua bán nhà đất, cho thuê nhà đất, or to select a type of project (from the prjectTypes I will provide below) if the 1st dropdown has been chose with dự án.
+4. lowest price input for integer only, min and default is 0, step is 1, cannot be equal to or higher than the input in highest price input with a ;
+highest price input for integer only, min is 1 and there is no default value, step is 1, cannot be equal to or lower than the input in lowest price input; 
+
+
+
+export const propertyTypes = [
+  { route: "can-ho-chung-cu", label: "căn hộ chung cư" },
+  {
+    route: "chung-cu-mini-can-ho-dich-vu",
+    label: "chung cư mini, căn hộ dịch vụ",
+  },
+  { route: "nha-rieng", label: "nhà riêng" },
+  { route: "nha-biet-thu-lien-ke", label: "nhà biệt thự, liền kề" },
+  { route: "nha-mat-pho", label: "nhà mặt phố" },
+  {
+    route: "shophouse-nha-pho-thuong-mai",
+    label: "shophouse, nhà phố thương mại",
+  },
+  { route: "dat-nen-du-an", label: "đất nền dự án" },
+  { route: "dat", label: "đất" },
+  { route: "trang-trai-khu-nghi-duong", label: "trang trại, khu nghỉ dưỡng" },
+  { route: "condotel", label: "condotel" },
+  { route: "kho-nha-xuong", label: "kho, nhà xưởng" },
+  { route: "cua-hang-kiot", label: "cửa hàng, kiot" },
+  { route: "nha-tro-phong-tro", label: "nhà trọ, phòng trọ" },
+  { route: "van-phong", label: "văn phòng" },
+  { route: "loai-bat-dong-san-khac", label: "loại bất động sản khác" },
+];
+
+export const projectTypes = [
+  { route: "can-ho-chung-cu", label: "căn hộ chung cư" },
+  { route: "cao-oc-van-phong", label: "cao ốc văn phòng" },
+  { route: "trung-tam-thuong-mai", label: "trung tâm thương mại" },
+  { route: "khu-do-thi-moi", label: "khu đô thị mới" },
+  { route: "khu-phuc-hop", label: "khu phức hợp" },
+  { route: "nha-o-xa-hoi", label: "nhà ở xã hội" },
+  { route: "khu-nghi-duong-sinh-thai", label: "khu nghỉ dưỡng, sinh thái" },
+  { route: "khu-cong-nghiep", label: "khu công nghiệp" },
+  { route: "biet-thu-lien-ke", label: "biệt thự liền kề" },
+  { route: "shophouse", label: "shophouse" },
+  { route: "nha-mat-pho", label: "nhà mặt phố" },
+  { route: "khac", label: "khác" },
+];
+
+export const wikiTypes = [
+  { route: "mua-bat-dong-san", label: "mua bất động sản" },
+  { route: "ban-bat-dong-san", label: "bán bất động sản" },
+  { route: "thue-bat-dong-san", label: "thuê bất động sản" },
+  { route: "tai-chinh", label: "tài chính" },
+  { route: "quy-hoach-phap-ly", label: "quy hoạch, pháp lý" },
+  { route: "noi-that-ngoai-that", label: "nội thất, ngoại thất" },
+  { route: "phong-thuy", label: "phong thủy" },
+];
+
+export const phoneBookTypes = [
+  { route: "nha-moi-gioi", label: "nhà môi giới" },
+  { route: "doanh-nghiep", label: "doanh nghiệp" },
+];

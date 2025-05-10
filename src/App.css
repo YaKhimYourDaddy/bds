@@ -1,0 +1,21 @@
+/* App-specific styles that extend Tailwind */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Custom utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}

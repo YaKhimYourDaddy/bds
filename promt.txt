@@ -1,12 +1,13 @@
-nextjs: build a complex search component with tailwind, you can use shadcn. the component must be completely responsive and have these filters:
-1. select between: mua bán nhà đất, cho thuê nhà đất, dự án (default: nothing checked)
-2. select a city and we can type in it to filter the cities that appears in this dropdown, the city is vietnamese names so handle if there's a problem in search by keyword, this filtering process for just 63 city is not so complex so we can just handle it right in the component file. (default: nothing checked)
-3. a dropdown (able after the 1st dropdown has been chosen) to select a type of property (from the propertyTypes I will provide below) if the 1st dropdown has been chose with mua bán nhà đất, cho thuê nhà đất, or to select a type of project (from the prjectTypes I will provide below) if the 1st dropdown has been chose with dự án.
-4. lowest price input for integer only, min and default is 0, step is 1, cannot be equal to or higher than the input in highest price input with a ;
-highest price input for integer only, min is 1 and there is no default value, step is 1, cannot be equal to or lower than the input in lowest price input; 
+nextjs: build a complex search feature with tailwind, you can use shadcn. the component must be completely responsive and have these filters:
+0. button xem kết quả
+1. a dropdown I think, to select between: mua bán nhà đất, cho thuê nhà đất, dự án (default: nothing checked)
+2. a dropdown I think, to select a city and we can type in it to filter the cities that appears in this dropdown, the city is vietnamese names so handle if there's a problem in search by keyword, this filtering process for just 63 city is not so complex so we can just handle it right in the component file. (default: nothing checked)
+3. a dropdown I think (able after the 1st dropdown has been chosen), to select a type of property (from the propertyTypes I will provide below) if the 1st dropdown has been chose with mua bán nhà đất, cho thuê nhà đất, or to select a type of project (from the prjectTypes I will provide below) if the 1st dropdown has been chose with dự án.
+4. a dropdown I think, to select price range
+5. a dropdown I think, to select area range
 
 
-
+we will change the URL base on the state of the filters instead of useState, and the search request only happens after the button xem kết quả has been click
 export const propertyTypes = [
   { route: "can-ho-chung-cu", label: "căn hộ chung cư" },
   {
@@ -60,3 +61,69 @@ export const phoneBookTypes = [
   { route: "nha-moi-gioi", label: "nhà môi giới" },
   { route: "doanh-nghiep", label: "doanh nghiệp" },
 ];
+
+export const priceRangesSetss = {
+  "mua-ban-nha-dat": [
+    { range: "tất cả"},
+    { range: "thỏa thuận"},
+    { range: "dưới 500 triệu"},
+    { range: "500 - 800 triệu"},
+    { range: "800 triệu - 1 tỷ"},
+    { range: "1 - 2 tỷ"},
+    { range: "2 - 3 tỷ"},
+    { range: "3 - 4 tỷ"},
+    { range: "4 - 5 tỷ"},
+    { range: "5 - 7 tỷ"},
+    { range: "7 - 10 tỷ"},
+    { range: "10 - 20 tỷ"},
+    { range: "20 - 30 tỷ"},
+    { range: "30 - 50 tỷ"},
+    { range: "trên 50 tỷ"}
+  ],
+  "cho-thue-nha-dat": [
+    { range: "tất cả"},
+    { range: "thỏa thuận"},
+    { range: "dưới 1 triệu"},
+    { range: "1 - 3 triệu"},
+    { range: "3 - 5 triệu"},
+    { range: "5 - 10 triệu"},
+    { range: "10 - 40 triệu"},
+    { range: "40 - 70 triệu"},
+    { range: "70 - 100 triệu"},
+    { range: "trên 100 triệu"}
+  ],
+  "du-an": [
+    { range: "tất cả"},
+    { range: "thỏa thuận"},
+    { range: "dưới 5 triệu"},
+    { range: "5 - 30 triệu"},
+    { range: "10 - 20 triệu"},
+    { range: "20 - 35 triệu"},
+    { range: "50 - 80 triệu"},
+    { range: "trên 80 triệu"}
+  ]
+}
+export const filters = {
+  "mua-ban-nha-dat": {
+    types: propertyTypes,
+    priceRanges: [
+      { range: "tất cả"},
+      { range: "thỏa thuận"},
+      { range: "dưới 500 triệu"},
+      { range: "500 - 800 triệu"},
+      { range: "800 triệu - 1 tỷ"},
+      { range: "1 - 2 tỷ"},
+      { range: "2 - 3 tỷ"},
+      { range: "3 - 4 tỷ"},
+      { range: "4 - 5 tỷ"},
+      { range: "5 - 7 tỷ"},
+      { range: "7 - 10 tỷ"},
+      { range: "10 - 20 tỷ"},
+      { range: "20 - 30 tỷ"},
+      { range: "30 - 50 tỷ"},
+      { range: "trên 50 tỷ"}
+    ],
+    areaRanges: []
+
+  }
+}

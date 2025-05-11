@@ -1,24 +1,16 @@
-nextjs app router with tailwindcss for a real estate full stack project for vietnamese users so the UI and routes must be vietnamese
-
-you can (or you should) use shadcn for consistent style through out the site
-
-today, don't write any backend code for now, just provide all the UI, components, layouts and pages first, because I only have 150k token today, make sure the UI is completely responsive
-
-we are providing a website for people to post their property and contact each other, there's no payment or VIP features
-
-user (property owner) có quyền đăng/chỉnh sửa/ẩn tin đăng bất động sản. owner khi đăng và chỉnh sửa sẽ cần approval của admin, owner chỉ có thể ẩn tin đã đăng, không thể xóa tin. Có thể đính kèm nhiều ảnh. Về việc đính kèm location cho tin đăng, owner có 3 lựa chọn, 1 là chọn 1 trong các location được đề xuất dựa trên địa chỉ mà owner cung cấp, 2 là chọn trực tiếp trên bản đồ, 3 là cung cấp vị trí chính xác hiện tại của thiết bị đang đăng nhập
-
-guest chỉ có quyền xem tin đăng
-
-user (buyer, renter) có quyền lưu tin đăng, nhắn tin cho owner in real time, xem số điện thoại và email của owner
-
-header của guest/user gồm:
-1. logo
-2. links: Tìm kiếm bất động sản, Tin bạn đăng, Tin đã lưu, Tin nhắn (Tin bạn đăng, Tin đã lưu, Tin nhắn sẽ điều hướng đến Đăng nhập nếu chưa đăng nhập)
-3. buttons: Toggle theme, Đăng nhập, Đăng kí, Đăng xuất, Tài khoản (Đăng nhập, Đăng kí sẽ xuất hiện khi chưa đăng nhập, Đăng xuất, Tài khoản sẽ xuất hiện khi đã đăng nhập)
-links và buttons sẽ collapse thành hamburger
-
-page tìm kiếm: thiết kế dựa trên filters object bên dưới, we will change the URL base on the state of the filters instead of useState, and the search request only happens after the button xem kết quả has been click
+export const wikiTypes = [
+  { value: "mua-bat-dong-san", label: "mua bất động sản" },
+  { value: "ban-bat-dong-san", label: "bán bất động sản" },
+  { value: "thue-bat-dong-san", label: "thuê bất động sản" },
+  { value: "tai-chinh", label: "tài chính" },
+  { value: "quy-hoach-phap-ly", label: "quy hoạch, pháp lý" },
+  { value: "noi-that-ngoai-that", label: "nội thất, ngoại thất" },
+  { value: "phong-thuy", label: "phong thủy" },
+];
+export const phoneBookTypes = [
+  { value: "nha-moi-gioi", label: "nhà môi giới" },
+  { value: "doanh-nghiep", label: "doanh nghiệp" },
+];
 export const propertyTypes = [
   { value: "can-ho-chung-cu", label: "căn hộ chung cư" },
   {
@@ -152,5 +144,3 @@ export const filters = [
     },
   },
 ];
-
-implement admin dashboard

@@ -1,0 +1,4 @@
+1.  auth: supabase
+-   pros: fast and easy implement, safe
+-   cons: created accounts cant be created again and cant confirm email which is good but still response like it success
+

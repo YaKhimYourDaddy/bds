@@ -107,8 +107,8 @@ export const areaRanges = [
 ];
 export const tabs: Tab[] = [
   {
-    value: "nha-dat-bat",
-    label: "Nhà đất bán",
+    value: "mua-ban",
+    label: "Mua bán",
     filters: [
       { value: "loaiNhaDat", label: "Loại nhà đất", items: propertyTypes },
       { value: "mucGia", label: "Mức giá", items: priceRangesSets.buying },
@@ -116,8 +116,8 @@ export const tabs: Tab[] = [
     ],
   },
   {
-    value: "nha-dat-cho-thue",
-    label: "Nhà đất cho thuê",
+    value: "cho-thue",
+    label: "Cho thuê",
     filters: [
       { value: "loaiNhaDat", label: "Loại nhà đất", items: propertyTypes },
       { value: "mucGia", label: "Mức giá", items: priceRangesSets.renting },
@@ -125,8 +125,8 @@ export const tabs: Tab[] = [
     ],
   },
   {
-    value: "du-an-bat-dong-san",
-    label: "Dự án bất động sản",
+    value: "du-an",
+    label: "Dự án",
     filters: [
       { value: "loaiDuAn", label: "Loại dự án", items: projectTypes },
       { value: "mucGia", label: "Mức giá", items: priceRangesSets.project },

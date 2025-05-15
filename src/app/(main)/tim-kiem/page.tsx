@@ -1,5 +1,5 @@
-import Search from "@/components/search";
+import { redirect } from "next/navigation";
 
 export default function Page() {
-  return <Search />;
+  redirect("/tim-kiem/nha-dat-ban");
 }

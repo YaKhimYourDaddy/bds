@@ -19,7 +19,7 @@ import {
   SelectTrigger, 
   SelectValue 
 } from "@/components/ui/select";
-import { PROPERTY_TYPES, TRANSACTION_TYPES, PROVINCES } from "@/lib/constants";
+import { PROPERTY_PROJECT_TYPES, FOR_RENT_PROPERTY_TYPES, FOR_SALE_PROPERTY_TYPES, TRANSACTION_TYPES, PROVINCES } from "@/lib/constants";
 
 export default function PropertyFilter() {
   const [priceRange, setPriceRange] = useState([0, 30]);
@@ -95,7 +95,7 @@ export default function PropertyFilter() {
               <div className="space-y-2">
                 <Label>Loại bất động sản</Label>
                 <div className="grid grid-cols-2 gap-2">
-                  {PROPERTY_TYPES.map((type) => (
+                  {FOR_RENT_PROPERTY_TYPES.map((type) => (
                     <div key={type.value} className="flex items-center space-x-2">
                       <Checkbox id={type.value} />
                       <Label htmlFor={type.value}>{type.label}</Label>

@@ -152,22 +152,58 @@ export const MOCK_PROPERTIES = [
   }
 ];
 
-// Property types
-export const PROPERTY_TYPES = [
-  { value: "canHo", label: "Căn hộ/Chung cư" },
-  { value: "nhaPho", label: "Nhà phố" },
-  { value: "bieThu", label: "Biệt thự" },
-  { value: "datNen", label: "Đất nền" },
-  { value: "vanPhong", label: "Văn phòng" },
-  { value: "matBang", label: "Mặt bằng kinh doanh" },
-  { value: "khac", label: "Khác" }
+// For sale property types
+export const FOR_SALE_PROPERTY_TYPES = [
+  { value: "can-ho-chung-cu", label: "Căn hộ chung cư" },
+  { value: "chung-cu-mini-can-ho-dich-vu", label: "Chung cư mini, căn hộ dịch vụ" },
+  { value: "nha-rieng", label: "Nhà riêng" },
+  { value: "nha-biet-thu-lien-ke", label: "Nhà biệt thự, liền kề" },
+  { value: "nha-mat-pho", label: "Nhà mặt phố" },
+  { value: "shophouse-nha-pho-thuong-mai", label: "Shophouse, nhà phố thương mại" },
+  { value: "dat-nen-du-an", label: "Đất nền dự án" },
+  { value: "dat", label: "Đất" },
+  { value: "trang-trai-khu-nghi-duong", label: "Trang trại, khu nghỉ dưỡng" },
+  { value: "condotel", label: "Condotel" },
+  { value: "kho-nha-xuong", label: "Kho, nhà xưởng" },
+  { value: "loai-bat-dong-san-khac", label: "Loại bất động sản khác" },
+];
+
+// For rent property types
+export const FOR_RENT_PROPERTY_TYPES = [
+  { value: "can-ho-chung-cu", label: "Căn hộ chung cư" },
+  { value: "chung-cu-mini-can-ho-dich-vu", label: "Chung cư mini, căn hộ dịch vụ" },
+  { value: "nha-rieng", label: "Nhà riêng" },
+  { value: "nha-biet-thu-lien-ke", label: "Nhà biệt thự, liền kề" },
+  { value: "nha-mat-pho", label: "Nhà mặt phố" },
+  { value: "shophouse-nha-pho-thuong-mai", label: "Shophouse, nhà phố thương mại" },
+  { value: "nha-tro-phong-tro", label: "Nhà trọ, phòng trọ" },
+  { value: "van-phong", label: "Văn phòng" },
+  { value: "cua-hang-kiot", label: "Cửa hàng, kiot" },
+  { value: "kho-nha-xuong-dat", label: "Kho, nhà xưởng, đất" },
+  { value: "loai-bat-dong-san-khac", label: "Loại bất động sản khác" },
+];
+
+// Property project types
+export const PROPERTY_PROJECT_TYPES = [
+  { value: "can-ho-chung-cu", label: "Căn hộ chung cư" },
+  { value: "cao-oc-van-phong", label: "Cao ốc văn phòng" },
+  { value: "trung-tam-thuong-mai", label: "Trung tâm thương mại" },
+  { value: "khu-do-thi-moi", label: "Khu đô thị mới" },
+  { value: "khu-phuc-hop", label: "Khu phức hợp" },
+  { value: "nha-o-xa-hoi", label: "Nhà ở xã hội" },
+  { value: "khu-nghi-duong-sinh-thai", label: "Khu nghỉ dưỡng, sinh thái" },
+  { value: "khu-cong-nghiep", label: "Khu công nghiệp" },
+  { value: "biet-thu-lien-ke", label: "Nhà biệt thự, liền kề" },
+  { value: "shophouse", label: "Shophouse" },
+  { value: "nha-mat-pho", label: "Nhà mặt phố" },
+  { value: "du-an-khac", label: "Dự án khác" },
 ];
 
 // Transaction types
 export const TRANSACTION_TYPES = [
-  { value: "ban", label: "Bán" },
-  { value: "choThue", label: "Cho thuê" },
-  { value: "duAn", label: "Dự án" }
+  { value: "mua-ban", label: "Mua bán" },
+  { value: "cho-thue", label: "Cho thuê" },
+  { value: "du-an", label: "Dự án" }
 ];
 
 // Vietnam provinces (partial list)
